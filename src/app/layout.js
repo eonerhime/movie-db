@@ -1,7 +1,8 @@
 import "@/styles/globals.css";
 import Header from "@/components/Header";
-import { Montserrat } from "next/font/google";
 import ThemeCom from "@/components/ThemeCom";
+import { Montserrat } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -16,13 +17,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${montserrat.className} antialiased`}>
-        <ThemeCom>
-          <Header />
-          {children}
-        </ThemeCom>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" suppressHydrationWarning>
+        <body className={`${montserrat.className} antialiased`}>
+          <ThemeCom>
+            <Header />
+            {children}
+          </ThemeCom>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
