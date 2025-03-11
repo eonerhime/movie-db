@@ -3,15 +3,14 @@
 @theme {
   --background: #ffffff;
   --foreground: #171717;
-  --dark: "class";
 }
 
-/* Dark mode */
+/* Initiates dark mode*/
 @custom-variant dark (&:where(.dark, .dark *));
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #f9f9f9;
+    --background: #ededed;
     --foreground: #0a0a0a;
   }
 }
@@ -19,5 +18,5 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: Arial, Helvetica, sans-serif;
 }
