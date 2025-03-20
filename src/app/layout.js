@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import ThemeCom from "@/components/ThemeCom";
 import { Montserrat } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
+import NavBar from "@/components/NavBar";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
         <body className={`${montserrat.className} antialiased`}>
           <ThemeCom>
             <Header />
+            <NavBar />
             {children}
           </ThemeCom>
         </body>
