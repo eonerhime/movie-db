@@ -6,7 +6,7 @@ export default function About() {
           <h1 className="text-3xl font-semibold text-center my-3">
             About IMDB Clone
           </h1>
-          <div className="text-md  flex flex-col gap-6">
+          <div className="text-md flex flex-col gap-6">
             <p>
               Welcome to IMDB Clone! This app is designed to provide users with
               a comprehensive database of movies, TV shows, and entertainment

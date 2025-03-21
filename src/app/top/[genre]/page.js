@@ -2,8 +2,9 @@ import Results from "@/components/Results";
 
 const API_KEY = process.env.API_KEY;
 
-export default async function Home({ params }) {
+export default async function Page({ params }) {
   const { genre } = await params;
+
   const res = await fetch(
     `https://api.themoviedb.org/3${
       genre === "rated" ? `/movie/top_rated` : `/trending/all/week`

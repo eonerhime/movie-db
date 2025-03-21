@@ -11,6 +11,7 @@ export default async function Home() {
     throw new Error("Failed to fetch data");
   }
   const results = data.results;
+
   return (
     <div>
       <Results results={results} />
