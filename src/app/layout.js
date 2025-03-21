@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import Header from "@/components/Header";
 import ThemeCom from "@/components/ThemeCom";
+import SearchBox from "@/components/SearchBox";
 import { Montserrat } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import NavBar from "@/components/NavBar";
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
           <ThemeCom>
             <Header />
             <NavBar />
+            <SearchBox />
             {children}
           </ThemeCom>
         </body>
