@@ -10,10 +10,8 @@ export default function Card({ result }) {
             result.backdrop_path || result.poster_path
           }`}
           alt={result.title || result.name}
-          className="sm:rounded-t-lg group-hover:opacity-75 transition-opacity duration-300
-            w-full sm:h-36 object-cover
-          "
-        ></img>
+          className="sm:rounded-t-lg group-hover:opacity-75 transition-opacity duration-300 w-full h-auto object-cover"
+        />
         <div className="p-2">
           <p className="line-clamp-3 text-sm">{result.overview}</p>
           <h2 className="font-bold truncate my-2 text-sm">
@@ -29,3 +27,19 @@ export default function Card({ result }) {
     </div>
   );
 }
+
+/*
+  <Image
+          width={200}
+          height={100}
+          src={
+            result.backdrop_path || result.poster_path
+              ? `https://image.tmdb.org/t/p/original/${
+                  result.backdrop_path || result.poster_path
+                }`
+              : "https://via.placeholder.com/300x450?text=No+Image+Available"
+          }
+          alt={result.title || result.name || "Movie Poster"}
+          className="sm:rounded-t-lg group-hover:opacity-75 transition-opacity duration-300 w-full h-auto object-cover"
+        />
+*/

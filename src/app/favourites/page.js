@@ -29,7 +29,7 @@ export default function Favorites() {
     if (isLoaded && isSignedIn && user) {
       fetchData();
     }
-  }, []);
+  }, [isLoaded, isSignedIn, user]);
 
   if (!isSignedIn) {
     return (

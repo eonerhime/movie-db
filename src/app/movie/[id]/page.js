@@ -35,8 +35,10 @@ export default async function MoviePage({ params }) {
           src={`https://image.tmdb.org/t/p/original/${
             movie.backdrop_path || movie.poster_path
           }`}
+          alt={movie.backdrop_path || movie.poster_path}
           className="rounded-lg w-full md:w-96 h-56 object-cover"
-        ></img>
+        />
+
         <div className="p-2">
           <h2 className="text-lg mb-3 font-bold">
             {movie.title || movie.name}
@@ -63,3 +65,19 @@ export default async function MoviePage({ params }) {
     </div>
   );
 }
+
+/*
+<Image
+          width={300}
+          height={500}
+          src={
+            movie.backdrop_path || movie.poster_path
+              ? `https://image.tmdb.org/t/p/original/${
+                  movie.backdrop_path || movie.poster_path
+                }`
+              : "/https://via.placeholder.com/300x450?text=No+Image+Available"
+          }
+          alt={movie.backdrop_path || movie.poster_path}
+          className="rounded-lg w-full h-auto object-cover"
+        />
+*/
