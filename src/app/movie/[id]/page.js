@@ -1,4 +1,5 @@
 import AddToFav from "@/components/AddToFav";
+import Image from "next/image";
 import Link from "next/link";
 
 export default async function MoviePage({ params }) {
