@@ -11,7 +11,7 @@ export default function Card({ result }) {
           height={300} // Adjust height
           src={
             result.backdrop_path || result.poster_path
-              ? `https://image.tmdb.org/t/p/original/${
+              ? `https://image.tmdb.org/t/p/w500/${
                   result.backdrop_path || result.poster_path
                 }`
               : "https://via.placeholder.com/300x450?text=No+Image+Available"
