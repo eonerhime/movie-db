@@ -31,14 +31,21 @@ export default async function MoviePage({ params }) {
   return (
     <div className="w-full">
       <div className="p-4 md:pt-8 flex flex-col md:flex-row content-center max-w-6xl mx-auto md:space-x-6">
-        <img
-          src={`https://image.tmdb.org/t/p/original/${
+        import Image from "next/image";
+        <Image
+          src={
             movie.backdrop_path || movie.poster_path
-          }`}
-          alt={movie.backdrop_path || movie.poster_path}
-          className="rounded-lg w-full md:w-96 h-56 object-cover"
+              ? `https://image.tmdb.org/t/p/original/${
+                  movie.backdrop_path || movie.poster_path
+                }`
+              : "/fallback-image.jpg" // Use a local fallback image in /public folder
+          }
+          alt={movie.title || "Movie Poster"}
+          width={384} // Adjusted for md:w-96
+          height={224} // Adjusted for h-56
+          className="rounded-lg w-full object-cover"
+          priority // Ensures it loads faster on Vercel
         />
-
         <div className="p-2">
           <h2 className="text-lg mb-3 font-bold">
             {movie.title || movie.name}
