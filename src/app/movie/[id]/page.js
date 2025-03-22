@@ -31,7 +31,6 @@ export default async function MoviePage({ params }) {
   return (
     <div className="w-full">
       <div className="p-4 md:pt-8 flex flex-col md:flex-row content-center max-w-6xl mx-auto md:space-x-6">
-        import Image from "next/image";
         <Image
           src={
             movie.backdrop_path || movie.poster_path
