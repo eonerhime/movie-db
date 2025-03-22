@@ -35,7 +35,7 @@ export default async function MoviePage({ params }) {
         <Image
           src={
             movie.backdrop_path || movie.poster_path
-              ? `https://image.tmdb.org/t/p/w500/${
+              ? `https://image.tmdb.org/t/p/original/${
                   movie.backdrop_path || movie.poster_path
                 }`
               : "/fallback-image.jpg" // Use a local fallback image in /public folder
