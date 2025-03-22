@@ -13,7 +13,7 @@ export default function DarkModeSwitch() {
 
   return (
     <div>
-      {console.log(theme, systemTheme, currentTheme)}
+      {/* {console.log(theme, systemTheme, currentTheme)} */}
       {mounted &&
         (currentTheme === "dark" ? (
           <MdLightMode

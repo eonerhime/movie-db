@@ -10,10 +10,8 @@ export default function Card({ result }) {
           width={500} // Adjust width
           height={300} // Adjust height
           src={
-            result.backdrop_path || result.poster_path
-              ? `https://image.tmdb.org/t/p/original/${
-                  result.backdrop_path || result.poster_path
-                }`
+            result.backdrop_path
+              ? `https://image.tmdb.org/t/p/original/${result.backdrop_path}`
               : "https://via.placeholder.com/300x450?text=No+Image+Available"
           }
           alt={result.title || result.name || "Movie Poster"}
