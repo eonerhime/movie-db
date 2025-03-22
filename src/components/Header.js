@@ -16,6 +16,9 @@ function Header() {
           <Link href={"/"}>Home</Link>
         </li>
         <li className="hidden sm:block">
+          <Link href={"/favourites"}>Favourites</Link>
+        </li>
+        <li className="hidden sm:block">
           <Link href={"/about"}>About</Link>
         </li>
       </ul>
