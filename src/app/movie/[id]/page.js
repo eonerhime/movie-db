@@ -34,8 +34,10 @@ export default async function MoviePage({ params }) {
       <div className="p-4 md:pt-8 flex flex-col md:flex-row content-center max-w-6xl mx-auto md:space-x-6">
         <Image
           src={
-            movie.backdrop_path
-              ? `https://image.tmdb.org/t/p/original/${movie.backdrop_path}`
+            movie.backdrop_path || movie.poster_path
+              ? `https://image.tmdb.org/t/p/w500/${
+                  movie.backdrop_path || movie.poster_path
+                }`
               : "/fallback-image.jpg" // Use a local fallback image in /public folder
           }
           alt={movie.title || "Movie Poster"}
