@@ -32,7 +32,7 @@ export default function MobileMenu() {
         <ul className="flex flex-col gap-5 items-start ml-2 dark:bg-gray-600 bg-amber-100 dark:text-gray-50 w-52 h-72 p-4 bg-opacity-25">
           {[
             { name: "Home", path: "/" },
-            { name: "Favourites", path: "/favourite" },
+            { name: "Favourites", path: "/favourites" },
             { name: "About", path: "/about" },
           ].map(({ name, path }) => (
             <li key={path}>

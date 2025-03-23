@@ -10,7 +10,7 @@ export default function NavigationClient() {
     <ul className="hidden min-[601px]:flex gap-5 items-center font-semibold">
       {[
         { name: "Home", path: "/" },
-        { name: "Favourites", path: "/favourite" },
+        { name: "Favourites", path: "/favourites" },
         { name: "About", path: "/about" },
       ].map(({ name, path }) => (
         <li key={path}>
