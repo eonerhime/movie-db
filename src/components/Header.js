@@ -1,10 +1,12 @@
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import DarkModeSwitch from "./DarkModeSwitch";
+import MobileMenu from "./MobileMenu";
+import Navigation from "./Navigation";
 
 function Header() {
   return (
-    <div className="flex justify-between items-center p-3 max-w-6xl max-auto">
+    <header className="flex justify-between items-center   p-3 max-w-6xl max-auto">
       <ul className="flex gap-4">
         <SignedIn>
           <UserButton />
@@ -12,15 +14,8 @@ function Header() {
         <SignedOut>
           <Link href={"/sign-in"}>Sign in</Link>
         </SignedOut>
-        <li className="hidden sm:block">
-          <Link href={"/"}>Home</Link>
-        </li>
-        <li className="hidden sm:block">
-          <Link href={"/favourites"}>Favourites</Link>
-        </li>
-        <li className="hidden sm:block">
-          <Link href={"/about"}>About</Link>
-        </li>
+        <MobileMenu />
+        <Navigation />
       </ul>
 
       <div className="flex items-center gap-4">
@@ -29,10 +24,10 @@ function Header() {
           <span className="text-2xl font-bold bg-amber-500 py-1 px-2 rounded-lg">
             IMDb
           </span>
-          <span className="text-xl hidden sm:inline">Clone</span>
+          <span className="text-sm hidden font-semibold sm:inline">Clone</span>
         </Link>
       </div>
-    </div>
+    </header>
   );
 }
 
